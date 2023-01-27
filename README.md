@@ -72,3 +72,11 @@ shopping
 ## php 8.1
 export PATH="/usr/local/opt/php@8.1/bin:$PATH"
 export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
+
+# git
+
+git add -A .  
+
+git commit -m "Guard"
+
+git push origin main 
