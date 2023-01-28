@@ -22,11 +22,11 @@ use App\Http\Controllers\Owner\Auth\VerifyEmailController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('owner.welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('owner.dashboard');
 })->middleware(['auth:owners'])->name('dashboard');
 
 
@@ -70,8 +70,10 @@ Route::middleware('auth:owners')->group(function () {
                 ->middleware('auth:owners')
                 ->name('password.confirm');
 
-    Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
+    Route::post('confirm-password', [ConfirmablePasswordController::class, 'store'])
+                ->middleware('auth:owners');
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->middleware('auth:owners')
                 ->name('logout');
 });
