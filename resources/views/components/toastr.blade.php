@@ -17,9 +17,16 @@
         "hideMethod": "fadeOut"
     }
 </script>
-@if (session('message'))
+@props(['status' => 'info'])
+
+@if (session('status') === 'info')
     <script>
         toastr.success('{{ session("message") }}');
     </script>
 @endif
 
+@if (session('status') === 'alert')
+    <script>
+        toastr.error('{{ session("message") }}');
+    </script>
+@endif
