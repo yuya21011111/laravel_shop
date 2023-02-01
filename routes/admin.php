@@ -22,12 +22,16 @@ use App\Http\Controllers\Admin\OwnersController;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.welcome');
-});
+// adminのwelcomへのアクセスを削除
+
+// Route::get('/', function () {
+//     return view('admin.welcome');
+// });
+
+// show不要
 
 Route::resource('owners', OwnersController::class)
-  ->middleware(['auth:admin']);
+  ->middleware(['auth:admin'])->except(['show']);
 
 Route::prefix('expired-owners')->
     middleware('auth:admin')->group(function(){
