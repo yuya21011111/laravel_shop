@@ -25,7 +25,7 @@
                      </a>
                    </div>
                    @endforeach
-                   {{ $owners->links() }}
+                   {{ $images->links() }}
                 </div>
             </div>
         </div>
