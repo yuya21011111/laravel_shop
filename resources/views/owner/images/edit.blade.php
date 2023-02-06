@@ -22,19 +22,34 @@
                               </div>
                               <div class="p-2 w-1/2 mx-auto">
                                 <div class="relative">
-                                  <div class="w-64">
+                                  <div class="w-128">
                                      <x-thumbnail :filename="$image->filename" type="products"/>
                                   </div>
                                 </div>
                               </div>
-                              <div class="p-2 w-full flex justify-around mt-4">
+                              <div class="p-4 w-full flex justify-around mt-4">
                                 <button type="button" onclick="location.href='{{ route('owner.images.index') }}'" class="bg-gray-200 border-0 py-2 px-8 focus:outline-none hover:bg-gray-400 rounded text-lg">戻る</button>
                                 <button type="submit" class="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">更新する</button>
                               </div>
                             </div>
                     </form>
+                    <form id="delete_{{ $image->id }}" method="post" action="{{ route('owner.images.destroy', ['image' => $image->id]) }}">
+                      @csrf
+                      @method('delete')
+                      <div class="p-2 w-full flex justify-around mt-32">
+                      <a href="#" data-id="{{ $image->id }}" onclick="deletePost(this)" class="rounded-full text-white bg-red-400 border-0 py-2 px-4 focus:outline-none hover:bg-red-500 rounded ">削除</a>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+      function deletePost(e) {
+        'use strict';
+        if (confirm('本当に削除してもいいですか？')) {
+          document.getElementById('delete_' + e.dataset.id).submit();
+        }
+      }
+    </script>
 </x-app-layout>

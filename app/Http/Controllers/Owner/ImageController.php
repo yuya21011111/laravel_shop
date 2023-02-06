@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UploadImageRequest;
 use InterventionImage;
 use App\Services\ImageService;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -96,14 +97,19 @@ class ImageController extends Controller
          'status' => 'info']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
-        //
+        $image = Image::findOrFail($id);
+        $filePath = 'public/products/' . $image->filename;
+
+        if(Storage::exists($filePath)) {
+            Storage::delete($filePath);
+        }
+        Image::findOrFail($id)->delete();
+        return redirect()
+        ->route('owner.images.index')
+        ->with(['message' => '画像情報を削除しました。',
+                'status' => 'alert']);
     }
 }
