@@ -7,11 +7,10 @@ if($type === 'products') {
 }
 @endphp
 
-</div>
-<!-- 画像(無ければNot_Image) -->
+<div>
   @if(empty($filename))
       <img src="{{ asset('images/no_image.jpg') }}">
   @else 
-      <img src="{{ asset($path . $filename) }}" class="rounded-lg" >
+      <img src="{{ asset($path . $filename) }}" >
   @endif
-<div>
+</div>
