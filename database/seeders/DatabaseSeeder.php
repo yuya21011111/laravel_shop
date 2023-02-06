@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Image;
 use Illuminate\Database\Seeder;
 
 
@@ -19,7 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             OwnerSeeder::class,
-            ShopSeeder::class
+            ShopSeeder::class,
+            ImageSeeder::class
         ]);
     }
 }
