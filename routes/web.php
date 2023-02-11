@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\User\ItemController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,19 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('user.welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('user.dashboard');
-})->middleware(['auth:users'])->name('dashboard');
+// こちらが優先される
+Route::middleware('auth:users')->group(function(){
+    Route::get('/', [ItemController::class,'index'])->name('items.index');
+});
+
+// dashboardを表示
+// Route::get('/dashboard', function () {
+//     return view('user.dashboard');
+// })->middleware(['auth:users'])->name('dashboard');
 
 
 

@@ -45,6 +45,27 @@
                                 name="password_confirmation" required />
             </div>
 
+             <!-- Post -->
+             <div class="mt-4">
+                <x-label for="post" :value="__('Post')" />
+
+                <x-input id="post" class="block mt-1 w-full" type="text" name="post" required />
+            </div>
+
+            <!-- Address -->
+            <div class="mt-4">
+                <x-label for="address" :value="__('Address')" />
+
+                <x-input id="address" class="block mt-1 w-full" type="text" name="address" required />
+            </div>
+
+            <!-- Age -->
+            <div class="mt-4">
+                <x-label for="age" :value="__('Age')" />
+
+                <x-input id="age" class="block mt-1 w-full" type="text" name="age" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.login') }}">
                     {{ __('Already registered?') }}
