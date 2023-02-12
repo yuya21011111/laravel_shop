@@ -23,6 +23,7 @@ Route::get('/', function () {
 // こちらが優先される
 Route::middleware('auth:users')->group(function(){
     Route::get('/user', [ItemController::class,'index'])->name('items.index');
+    Route::get('show/{item}',[ItemController::class, 'show'])->name('items.show');
 });
 
 // dashboardを表示
