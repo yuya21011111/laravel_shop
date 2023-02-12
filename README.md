@@ -61,13 +61,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-##　仕様技術
-PHP Javascript Laravel tailwindcss
-
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-##
-shopping
+##　仕様技術
+PHP(v8.1.13) Javascript Laravel(v8.83.27) tailwindcss
+
+## Faker
+DatabaseSeeder.phpにFakerがあるので使用しない場合はコメントアウトしてください。
+
 
 ## php 8.1
 export PATH="/usr/local/opt/php@8.1/bin:$PATH"
