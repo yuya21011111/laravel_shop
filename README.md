@@ -85,3 +85,15 @@ git push origin main
  create画面製作
  test
  test2
+
+ # 2/12
+
+ web.php 
+
+ welcom.blade.php
+
+ index.blade.php
+
+ user.navig
+
+ Route.serve

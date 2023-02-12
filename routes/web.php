@@ -16,13 +16,13 @@ use App\Http\Controllers\User\ItemController;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('user.welcome');
 });
 
 // こちらが優先される
 Route::middleware('auth:users')->group(function(){
-    Route::get('/', [ItemController::class,'index'])->name('items.index');
+    Route::get('/user', [ItemController::class,'index'])->name('items.index');
 });
 
 // dashboardを表示

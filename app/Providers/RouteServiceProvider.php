@@ -17,7 +17,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/';
+    
+     // ログイン成功時に/userを表示
+    public const HOME = '/user';
     public const OWNER_HOME = '/owner/dashboard';
     public const ADMIN_HOME = '/admin/dashboard';
 
