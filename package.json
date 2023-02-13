@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "micromodal": "^0.4.10",
+        "swiper": "^6.7.0",
         "toastr": "^2.1.4"
     }
 }

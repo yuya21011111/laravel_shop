@@ -66,6 +66,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ##　仕様技術
 PHP(v8.1.13) Javascript Laravel(v8.83.27) tailwindcss
 
+## ライブラリ
+toastr.js swiper.js
+
 ## Faker
 DatabaseSeeder.phpにFakerがあるので使用しない場合はコメントアウトしてください。
 
