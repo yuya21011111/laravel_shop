@@ -63,8 +63,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+## 参考サイト
+Laravel Document
+https://readouble.com/laravel/8.x/ja/installation.html
+
 ##　仕様技術
 PHP(v8.1.13) Javascript Laravel(v8.83.27) tailwindcss
+
+## API
+Stripe（決済時）
 
 ## ライブラリ
 toastr.js swiper.js
@@ -77,13 +84,15 @@ DatabaseSeeder.phpにFakerがあるので使用しない場合はコメントア
 export PATH="/usr/local/opt/php@8.1/bin:$PATH"
 export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
 
-# git
+## git
 
 git add -A .  
-
 git commit -m "Guard"
-
 git push origin main 
+
+## Clone 
+https://github.com/yuya21011111/laravel_shop.git
+
 
 # 1/30
  create画面製作

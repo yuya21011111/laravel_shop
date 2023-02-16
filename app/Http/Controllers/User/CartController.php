@@ -99,14 +99,16 @@ class CartController extends Controller
 
         return view('user.checkout', compact('session','publicKey'));
     }
-
+    
+    // 購入後にカート内の商品を削除
     public function success() {
         Cart::where('user_id',Auth::id())
         ->delete();
 
         return redirect()->route('user.items.index');
     }
-
+    
+    // 決済中にキャンセルの場合はカートに戻る
     public function cancel() {
         $user = User::findOrFail(Auth::id());
         foreach($user->products as $product) {
