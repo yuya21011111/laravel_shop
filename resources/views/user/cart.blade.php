@@ -36,8 +36,8 @@
                             </div>
                         </div>
                       @endforeach
-                      <div class="my-2">
-                        小計：{{ number_format($totalPrice) }}<span class="text-sm text-gray-700">円(税込)</span>
+                      <div class="my-2 text-red-700">
+                        小計：{{ number_format($totalPrice) }}<span class="text-sm text-red-700">円(税込)</span>
                       </div>
                         <button onclick="location.href='{{ route('user.cart.checkout') }}'" class="flex ml-auto mr-3 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                           購入

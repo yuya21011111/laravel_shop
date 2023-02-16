@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use App\Models\Shop;
 use App\Models\SecondaryCategory;
 use App\Models\Image;
 use App\Models\Stock;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
+
 
 class Product extends Model
 {
@@ -78,8 +79,25 @@ class Product extends Model
         ->join('images as image1','products.image1','=','image1.id')
         ->where('shops.is_selling',true)
         ->where('products.is_selling',true)
-        ->select('products.id as id','products.name as name','products.price','products.information','secondary_categories.name as category',
-        'image1.filename as filename');
+        ->select('products.id as id', 'products.name as name', 'products.price','products.sort_order as sort_order','products.information','secondary_categories.name as category','image1.filename as filename');
 
+    }
+
+    public function scopeSortOrder($query,$sortOrder) {
+        if($sortOrder === null || $sortOrder === \Constant::SORT_ORDER['recommend']) {
+            return $query->orderBy('sort_order','asc');
+        }
+        if($sortOrder === \Constant::SORT_ORDER['higherPrice']) {
+            return $query->orderBy('price','desc');
+        }
+        if($sortOrder === \Constant::SORT_ORDER['lowerPrice']) {
+            return $query->orderBy('price','asc');
+        }
+        if($sortOrder === \Constant::SORT_ORDER['later']) {
+            return $query->orderBy('products.created_at','desc');
+        }
+        if($sortOrder === \Constant::SORT_ORDER['older']) {
+            return $query->orderBy('products.created_at','asc');
+        }        
     }
 }
