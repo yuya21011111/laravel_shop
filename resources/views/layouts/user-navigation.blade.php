@@ -72,7 +72,7 @@
                 Home
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('user.cart.index')" :active="request()->routeIs('user.cart.index')">
-                Home
+                Cart
             </x-responsive-nav-link>
         </div>
 
@@ -88,6 +88,9 @@
                 <form method="POST" action="{{ route('user.logout') }}">
                     @csrf
 
+                    <x-responsive-nav-link :href="route('user.items.index')">
+                        TOP
+                    </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('user.logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">

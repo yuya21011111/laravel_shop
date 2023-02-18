@@ -77,6 +77,13 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+
+        $request->validate([
+            'image1' => ['required'],
+            'image2' => ['required'],
+            'image3' => ['required'],
+            'image4' => ['required'],
+        ]);
        
 
         try{
@@ -149,6 +156,10 @@ class ProductController extends Controller
     {
         $request->validate([
             'current_quantity' => ['required', 'integer'],
+            'image1' => ['required'],
+            'image2' => ['required'],
+            'image3' => ['required'],
+            'image4' => ['required'],
         ]);
 
         $product = Product::findOrFail($id);
