@@ -105,7 +105,9 @@ class CartController extends Controller
         Cart::where('user_id',Auth::id())
         ->delete();
 
-        return redirect()->route('user.items.index');
+        return redirect()->route('user.items.index')
+        ->with(['message' => '商品を購入しました。。',
+                   'status' => 'info']);
     }
     
     // 決済中にキャンセルの場合はカートに戻る
@@ -118,6 +120,8 @@ class CartController extends Controller
                     'quantity' => $product->pivot->quantity
                 ]);
         }
-        return redirect()->route('user.cart.index');
+        return redirect()->route('user.cart.index')
+        ->with(['message' => '取引を中止しました。',
+                   'status' => 'alert']);
     }
 }

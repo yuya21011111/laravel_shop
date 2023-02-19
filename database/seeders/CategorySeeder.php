@@ -31,7 +31,7 @@ class CategorySeeder extends Seeder
 
         DB::table('secondary_categories')->insert([
             [
-                'name' => 'さつまいも',
+                'name' => 'にんじん',
                 'sort_order' => 1,
                 'primary_category_id' => 1
             ],
@@ -41,17 +41,17 @@ class CategorySeeder extends Seeder
                 'primary_category_id' => 1
             ],
             [
-                'name' => 'とうもろこし',
+                'name' => 'パプリカ',
                 'sort_order' => 3,
                 'primary_category_id' => 1
             ],
             [
-                'name' => 'みかん',
+                'name' => 'りんご',
                 'sort_order' => 4,
                 'primary_category_id' => 2
             ],
             [
-                'name' => 'ブドウ',
+                'name' => 'バナナ',
                 'sort_order' => 5,
                 'primary_category_id' => 2
             ],

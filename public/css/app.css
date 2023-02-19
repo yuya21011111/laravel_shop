@@ -1303,6 +1303,18 @@ select {
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-auto {
     overflow: auto;
 }
@@ -1738,6 +1750,10 @@ select {
 
 .pr-10 {
     padding-right: 2.5rem;
+}
+
+.pr-8 {
+    padding-right: 2rem;
 }
 
 .text-left {
@@ -2469,8 +2485,16 @@ select {
         margin-left: 0.5rem;
     }
 
+    .md\:block {
+        display: block;
+    }
+
     .md\:flex {
         display: flex;
+    }
+
+    .md\:hidden {
+        display: none;
     }
 
     .md\:min-h-screen {
@@ -2511,6 +2535,12 @@ select {
 
     .md\:justify-around {
         justify-content: space-around;
+    }
+
+    .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1rem * var(--tw-space-x-reverse));
+        margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
     }
 
     .md\:border-t-0 {
