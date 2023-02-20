@@ -9,6 +9,7 @@ use App\Models\Stock;
 use App\Models\PrimaryCategory;
 use Illuminate\Support\Facades\DB;
 
+
 class ItemController extends Controller
 {
  public function __construct()
@@ -54,4 +55,5 @@ class ItemController extends Controller
         return view('user.show',compact('product','quantity'));
 
     }
+
 }
