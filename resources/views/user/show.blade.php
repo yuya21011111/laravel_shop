@@ -125,5 +125,4 @@
         </div>
       </div>
   </div>
-  <script src="{{ mix('js/swiper.js') }}" defer></script>
 </x-app-layout>
