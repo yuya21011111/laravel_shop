@@ -22,6 +22,7 @@
 
          <!-- Scripts -->
          <script src="{{ asset('js/app.js') }}" defer></script>
+         <script src="{{ asset('js/swiper.js') }}" defer></script>
 
          <!-- toast -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
