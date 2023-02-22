@@ -93,7 +93,7 @@
                   <div class="mb-4 text-center">{{ $product->shop->name }}</div>
                   <div class="mb-4 text-center">
                       @if($product->shop->filename !== null)
-                      <img class="mx-auto w-40 h-40 object-cover rounded-full" src="{{ asset('storage/shops/' . $product->shop->filename)}}">
+                      <img class="mx-auto w-40 h-40 object-cover rounded-full" src="{{ asset('shops/' . $product->shop->filename)}}">
                     @else 
                       <img src="">
                     @endif 
