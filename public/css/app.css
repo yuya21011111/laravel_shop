@@ -1528,6 +1528,12 @@ select {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-blue-500 {
+    --tw-gradient-from: #3b82f6;
+    --tw-gradient-to: rgb(59 130 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-blue-400 {
     --tw-gradient-to: #60a5fa;
 }
@@ -1538,6 +1544,10 @@ select {
 
 .to-blue-800 {
     --tw-gradient-to: #1e40af;
+}
+
+.to-green-400 {
+    --tw-gradient-to: #4ade80;
 }
 
 .bg-cover {

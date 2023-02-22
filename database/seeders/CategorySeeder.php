@@ -24,7 +24,7 @@ class CategorySeeder extends Seeder
                 'sort_order' => 2,
             ],
             [
-                'name' => 'ドリンク',
+                'name' => 'その他',
                 'sort_order' => 3,
             ],
         ]);
@@ -36,7 +36,7 @@ class CategorySeeder extends Seeder
                 'primary_category_id' => 1
             ],
             [
-                'name' => 'ニンニク',
+                'name' => 'トマト',
                 'sort_order' => 2,
                 'primary_category_id' => 1
             ],
@@ -46,19 +46,64 @@ class CategorySeeder extends Seeder
                 'primary_category_id' => 1
             ],
             [
-                'name' => 'りんご',
+                'name' => 'ピーマン',
                 'sort_order' => 4,
+                'primary_category_id' => 1
+            ],
+            [
+                'name' => 'キュウリ',
+                'sort_order' => 5,
+                'primary_category_id' => 1
+            ],
+            [
+                'name' => 'ゴーヤ',
+                'sort_order' => 6,
+                'primary_category_id' => 1
+            ],
+            [
+                'name' => 'ナス',
+                'sort_order' => 7,
+                'primary_category_id' => 1
+            ],
+            [
+                'name' => 'りんご',
+                'sort_order' => 8,
                 'primary_category_id' => 2
             ],
             [
                 'name' => 'バナナ',
-                'sort_order' => 5,
+                'sort_order' => 9,
                 'primary_category_id' => 2
             ],
             [
                 'name' => 'いちご',
-                'sort_order' => 6,
+                'sort_order' => 10,
                 'primary_category_id' => 2
+            ],
+            [
+                'name' => 'さくらんぼ',
+                'sort_order' => 11,
+                'primary_category_id' => 2
+            ],
+            [
+                'name' => '柿',
+                'sort_order' => 12,
+                'primary_category_id' => 2
+            ],
+            [
+                'name' => 'すもも',
+                'sort_order' => 13,
+                'primary_category_id' => 2
+            ],
+            [
+                'name' => 'びわ',
+                'sort_order' => 14,
+                'primary_category_id' => 2
+            ],
+            [
+                'name' => 'その他',
+                'sort_order' => 15,
+                'primary_category_id' => 3
             ],
         ]);
     }

@@ -82,9 +82,9 @@
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
                   <font style="vertical-align: inherit;">
                     <font style="vertical-align: inherit;">Greensはご家庭で余ったお野菜やフルーツを手軽に販売できるショッピングサイトです。</font>
-                    <font style="vertical-align: inherit;">オーナー様は下記からどうぞ</font><br>
+                    {{-- <font style="vertical-align: inherit;">オーナー様は下記からどうぞ</font><br>
                     <a href="http://127.0.0.1:8000/owner/login"><button class="bg-gradient-to-b from-blue-300 to-blue-800 hover:bg-gradient-to-l text-white rounded px-4 py-2">オーナー用</button></a>
-                  </font>
+                  </font> --}}
                 </p>
               </div>
           </section>
