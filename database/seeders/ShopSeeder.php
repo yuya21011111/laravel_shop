@@ -20,21 +20,21 @@ class ShopSeeder extends Seeder
                 'owner_id' => 1,
                 'name' => '店名',
                 'information' => '店名情報,店名情報,店名情報',
-                'filename' => 'sample1.jpg',
+                'filename' => 'sample1.png',
                 'is_selling' => true
             ],
             [
                 'owner_id' => 2,
                 'name' => '店名',
                 'information' => '店名情報,店名情報,店名情報',
-                'filename' => 'sample2.jpg',
+                'filename' => 'sample2.png',
                 'is_selling' => true
             ],
             [
                 'owner_id' => 3,
                 'name' => '店名',
                 'information' => '店名情報,店名情報,店名情報',
-                'filename' => 'sample3.jpg',
+                'filename' => 'sample3.png',
                 'is_selling' => true
             ],
         ]);

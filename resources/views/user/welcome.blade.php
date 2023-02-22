@@ -55,13 +55,13 @@
                   <img src="{{ asset('images/main_header.png') }}">
                </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/sample1.jpg') }}">
+                    <img src="{{ asset('images/sample1.png') }}">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/sample2.jpg') }}">
+                    <img src="{{ asset('images/sample2.png') }}">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/sample3.jpg') }}">
+                    <img src="{{ asset('images/sample3.png') }}">
                 </div>
              </div>
             </div>
